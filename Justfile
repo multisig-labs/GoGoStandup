@@ -1,3 +1,5 @@
+set dotenv-load
+
 default:
     just --list
 
@@ -13,3 +15,15 @@ run-docker:
 
 run:
     pipenv run python3 bot.py
+
+fly:
+    fly launch
+    fly secrets import < .env
+    fly deploy
+
+refuel:
+    fly secrets import < .env
+    fly deploy
+
+shoot-down:
+    fly destroy gogostandup --yes

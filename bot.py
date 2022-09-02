@@ -171,7 +171,7 @@ async def last(interaction: nextcord.Interaction):
         session.close()
 
 
-@ tasks.loop(seconds=10)
+@tasks.loop(seconds=10)
 async def send_loop():
     now = arrow.utcnow()
     session = Session(engine)

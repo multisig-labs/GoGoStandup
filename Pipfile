@@ -9,6 +9,7 @@ python-dotenv = "*"
 sqlmodel = "*"
 arrow = "*"
 pytimeparse = "*"
+psycopg2 = "*"
 
 [dev-packages]
 autopep8 = "*"

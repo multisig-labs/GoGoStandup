@@ -18,11 +18,11 @@ run:
 
 fly:
     fly launch
-    fly secrets import < .env
+    fly secrets import < prod.env
     fly deploy
 
 refuel:
-    fly secrets import < .env
+    fly secrets import < prod.env
     fly deploy
 
 shoot-down:
